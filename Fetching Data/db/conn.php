@@ -1,5 +1,6 @@
 <?php
 $servername = "218.161.38.126";
+$port = "3306";
 $username = "ilab";
 $password = "Aa123!";
 $dbname = "f2e";
@@ -8,8 +9,8 @@ $dbname = "f2e";
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
-if (($conn))
+if (!($conn))
     echo "Failed to connect to MySQL: " . mysqli_connect_error() . '<br>';
 else
-    echo "Failed to connect to MySQL" . '<br>';
+    echo "Success to connect to MySQL" . '<br>';
 ?>
