@@ -1,17 +1,15 @@
 <?php
-$host = "ja-cdbr-azure-west-a.cloudapp.net";
-$port = 3306;
-$socket = "";
-$user = "bc01ae57c9771a";
-$password = "4e81aa21";
+$servername = "218.161.38.126";
+$username = "ilab";
+$password = "Aa123!";
 $dbname = "f2e";
 
-$link = mysqli_connect($host, $user, $password, $dbname);
-mysqli_query($link, "SET NAMES 'utf8'");
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
-if (!($link))
+if (($conn))
     echo "Failed to connect to MySQL: " . mysqli_connect_error() . '<br>';
 else
-    echo "Success to connect to MySQL" . '<br>';
+    echo "Failed to connect to MySQL" . '<br>';
 ?>
