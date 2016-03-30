@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <title>mysql angular</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script type="text/javascript" src="./js/db_name.js"></script>
+</head>
+<body>
+
+<div ng-app="myApp" ng-controller="customersCtrl">
+    <table>
+        <tr ng-repeat="x in names">
+            <td>{{ x.Name }}</td>
+            <td>{{ x.Country }}</td>
+            <td>{{ x.City }}</td>
+        </tr>
+    </table>
+</div>
+
+</body>
