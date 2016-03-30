@@ -15,8 +15,16 @@
         <tr ng-repeat="x in pics">
             <td>{{ x.id}}</td>
             <td>{{ x.pic }}</td>
+            <td><img ng-src="{{ x.pic }}" alt="pic"/></td>
         </tr>
     </table>
 </div>
-
+    <div>DROP!
+        <button onclick="document.querySelector('input').click()">Or click</button>
+    </div>
+    <input style="visibility: collapse; width: 0px;" type="file" multiple="" onchange="upload(this.files[0])">
+    <p>Uploading...</p>
+    <a id="link">It's online!!!</a>
+    <img id="download-pic">
+    <ul></ul>
 </body>
