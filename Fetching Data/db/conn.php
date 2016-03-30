@@ -1,9 +1,9 @@
 <?php
-$host = "ja-cdbr-azure-west-a.cloudapp.net";
+$host = "218.161.38.126";
 $port = 3306;
 $socket = "";
-$user = "bc01ae57c9771a";
-$password = "4e81aa21";
+$user = "ilab";
+$password = "Aa123!";
 $dbname = "f2e";
 
 $link = mysqli_connect($host, $user, $password, $dbname);
