@@ -43,8 +43,8 @@ li {
     font-size: 12px;
 }
 
-.load-box ul li input {
-    display: none;
+.load-box ul li:nth-child(1) {
+    display: inline;
 }
 
 #delete-pic {
@@ -79,6 +79,24 @@ li {
 
 #edit:hover {
     background-color: deepskyblue;
+    cursor: pointer;
+}
+
+#update {
+    width: 80px;
+    height: 60px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: lightgreen;
+    border-radius: 25px;
+    font-size: 12px;
+    border: 1px solid lightgreen;
+    margin-left: 10px;
+}
+
+#update:hover {
+    background-color: greenyellow;
     cursor: pointer;
 }
 

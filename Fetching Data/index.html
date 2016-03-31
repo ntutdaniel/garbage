@@ -8,7 +8,6 @@
     <script src="js/imgur_api.js"></script>
     <script type="text/javascript" src="./js/db_name.js"></script>
     <script type="text/javascript" src="./js/jquery.js"></script>
-    <script type="text/javascript" src="./js/index.js"></script>
     <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body ng-app="myApp">
@@ -22,10 +21,10 @@
 <!--------後台撈圖片-------->
 <div class="load-box" ng-controller="customersCtrl">
     <ul ng-repeat="x in pics">
-        <li><input type="text" value="{{ x.pic }}"></li>
+        <li ng-if="$index == isActive"><input type="text" ng-model="x.pic" ng-value="x.pic" required><a id="update" ng-click="update(x.id, x.pic, $index)">Update</a></li>
         <li><img ng-src="{{ x.pic }}" alt="pic"/></li>
         <li>
-            <a id="delete-pic" ng-click="delete(x.id,$index)">Delete</a><a id="edit">Edit</a>
+            <a id="delete-pic" ng-click="delete(x.id,$index)">Delete</a><a id="edit" ng-click="edit($index)">Edit</a>
         </li>
     </ul>
 </div>
