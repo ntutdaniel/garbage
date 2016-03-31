@@ -6,8 +6,8 @@ $conn = new mysqli($host, $user, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$url = $_POST['url'];
-$query = mysqli_query($conn, 'INSERT INTO `imgur` (pic_add) VALUES("' . $url . '")');
+$id = $_GET['id'];
+$query = mysqli_query($conn, "DELETE FROM imgur WHERE id= '$id'");
 if (!$query) echo mysqli_error($conn);
 else echo "success";
 ?>

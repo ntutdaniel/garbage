@@ -1,21 +1,112 @@
-table, th , td  {
-  border: 1px solid grey;
-  border-collapse: collapse;
-  padding: 5px;
+body {
+    text-align: center;
 }
-table tr:nth-child(odd) {
-  background-color: #f1f1f1;
+
+img {
+    width: 200px;
+    height: 150px;
 }
-table tr:nth-child(even) {
-  background-color: #ffffff;
+
+ul, li {
+    padding: 0;
+    margin: 0;
 }
-    body {text-align: center; padding-top: 100px;}
-    div { border: 10px solid black; text-align: center; line-height: 100px; width: 200px; margin: auto; font-size: 40px; display: inline-block;}
-    #link, p , div {display: none}
-    div {display: inline-block;}
-    
-    .uploading div {display: none}
-    .uploaded div {display: none}
-    .uploading p {display: inline}
-    .uploaded #link {display: inline}
-    em {position: absolute; bottom: 0; right: 0}
+
+li {
+    text-decoration: none;
+    list-style: none;
+}
+
+.show-box {
+    display: none;
+}
+
+.load-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-flow: wrap;
+    margin-left: -10px;
+}
+
+.load-box ul {
+    padding: 10px;
+    box-shadow: 2px 2px 1px #888888;
+    box-sizing: border-box;
+}
+
+.load-box ul li {
+    padding-left: 10px;
+    padding-top: 10px;
+    box-sizing: border-box;
+    width: calc(100% / 5);
+    font-size: 12px;
+}
+
+.load-box ul li input {
+    display: none;
+}
+
+#delete-pic {
+    width: 80px;
+    height: 60px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: orangered;
+    border-radius: 25px;
+    font-size: 12px;
+    border: 1px solid orangered;
+}
+
+#delete-pic:hover {
+    background-color: coral;
+    cursor: pointer;
+}
+
+#edit {
+    width: 80px;
+    height: 60px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: dodgerblue;
+    border-radius: 25px;
+    font-size: 12px;
+    border: 1px solid dodgerblue;
+    margin-left: 10px;
+}
+
+#edit:hover {
+    background-color: deepskyblue;
+    cursor: pointer;
+}
+
+.drop-box {
+    border: 10px solid black;
+    line-height: 100px;
+    width: 200px;
+    margin: auto;
+    font-size: 40px;
+    display: inline-block;
+}
+
+#loading {
+    display: none;
+}
+
+.uploading div {
+    display: none
+}
+
+.uploading p {
+    display: inline
+}
+
+.uploaded div {
+    display: block;
+}
+
+.uploaded .show-box {
+    display: block;
+}

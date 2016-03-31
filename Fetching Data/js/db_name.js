@@ -1,8 +1,16 @@
 var app = angular.module('myApp', []);
 app.controller('customersCtrl', function ($scope, $http) {
-    $http.get("./db/update.php")
+    $http.get("./db/select_all.php")
         .then(function (response) {
             $scope.pics = response.data;
         });
-    $scope.test='http://i.imgur.com/w2L3I26.jpg';
+
+    $scope.delete = function (deletingId, index) {
+        $http.get("./db/delete.php?id=" + deletingId)
+            .success(function (data) {
+                $scope.pics.splice(index, 1)
+            })
+    }
+
+
 });
