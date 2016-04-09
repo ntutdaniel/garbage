@@ -29,4 +29,11 @@ app.controller('customersCtrl', function ($scope, $http) {
                 window.location.reload("./index.html");
             })
     }
+
+    $scope.download = function(pic_add){
+        $http.get("./db/download.php?id=" + pic_add)
+            .success(function(data){
+                console.log(data);
+            });
+   }
 });

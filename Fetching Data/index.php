@@ -38,8 +38,7 @@ session_destroy();
             </li>
             <li><img ng-src="{{ x.pic }}" alt="pic"/></li>
             <li>
-                <a id="delete-pic" ng-click="delete(x.id,$index)">Delete</a><a id="edit"
-                                                                               ng-click="edit($index)">Edit</a>
+                <a id="delete-pic" ng-click="delete(x.id,$index)">Delete</a><a id="edit" ng-click="edit($index)">Edit</a><a id="download" ng-click="download(x.pic)">Download</a>
             </li>
         </ul>
     </div>
